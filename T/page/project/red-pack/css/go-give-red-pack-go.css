@@ -1,0 +1,32 @@
+/*第三层的DIV*/
+
+#red-pack-share-send {
+	display: none;
+	position: absolute;
+	width: 100%;
+	min-width: 320px;
+	max-width: 640px;
+	z-index: 200;
+}
+
+/*指示文字*/
+#red-pack-share-send span{
+	clear: both;
+	font-size: 18px;
+	height: 40px;
+	color: white;
+	display: block;
+	text-align: center;
+}
+
+/*右上角指引线图片*/
+#red-pack-share-send-img {
+	float: right;
+	margin: 20px;
+	width: 100px;
+}
+
+/*发红包按钮*/
+#red-pack-share-send-fa{
+	cursor: pointer; position: relative;top: -30px;
+}

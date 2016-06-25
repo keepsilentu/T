@@ -1,0 +1,194 @@
+/*          ------各种通用标签样式-----          */
+
+a:hover{background-color:lightgoldenrodyellow; color: red; border: 1px solid orange; border-radius: 3px;}
+/*a href超链接*/
+.QR_a_href{
+	color: dodgerblue;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.QR_a_href1{
+	color: red;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+
+/*i标签样式*/
+
+i{
+	color: #222222; font-style: normal;
+}
+
+/*P_title*/
+
+.QR_check_p_title {
+	border-left: 3px solid red;
+}
+
+
+/*h_title*/
+
+.QR_check_h_title {
+	 height: 30px; line-height: 30px;
+	 
+	font-size: 18px;
+	color: #636363;
+	font-weight: bold;
+	font-family: "微软雅黑";
+	margin-left: 20px;
+}
+
+.QR_check_input {
+	height: 10%;
+	margin-left: 20px;
+}
+
+
+/*hr样式*/
+
+hr {
+	#FE0000;
+}
+
+
+/*table样式*/
+
+.QR_table {
+	margin-top: 6px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+
+.QR_table thead tr {
+	align-content: center;
+	background: #F5F5F5;
+	height: 40px;
+	margin-bottom: 30px;
+}
+
+.QR_table tbody tr {
+	line-height: 37px;
+}
+
+
+/*a标签按钮样式*/
+
+.QR_a {
+	display: block;
+	background: #fe0000;
+	width: 100px;
+	margin:auto;
+	margin-top: 15px;
+	text-align: center;
+	height: 40px;
+	line-height: 40px;
+	border-radius: 5px;
+	text-decoration: none;
+	color: white;
+	cursor: pointer;
+}
+
+/*取消按钮*/
+.QR_a_1{
+	display: block;
+	background: #f4f5f9;
+	width: 100px;
+	margin:auto;
+	margin-top: 15px;
+	text-align: center;
+	height: 40px;
+	line-height: 40px;
+	border-radius: 5px;
+	text-decoration: none;
+	color: #FE0000;
+	border: 1px solid #FE0000;
+	cursor: pointer;
+	
+}
+
+
+/*按钮移上去的效果*/
+.QR_a:hover{background-color:darkred; color: wheat;}
+
+
+/*BODY_DIV*/
+
+.QRbody{
+	width: 928px;
+	background-color: white;
+	height: 700px;
+	margin: auto;
+	/*margin-top: 190px;*/
+	background: #fafafa;
+}
+
+/*          ------各种通用标签样式-----          */
+
+
+
+
+
+/*          ------- 收银台 -------                        */
+
+
+/*收银DIV*/
+
+.QR_check_box {
+	width: 100%;
+	border: 1px solid gainsboro;
+	height: 380px;
+	margin: auto;
+	background-color: #fafafa;
+	background-image: url(../img/000002.png);
+	background-repeat: no-repeat;
+	background-position: 278px center;
+}
+
+
+/*指定收银DIV*/
+
+#QR_check_specify {
+	float: left;
+	background: white;
+	width: 62.8%;
+	height: 100%;
+	border-right: 1px solid gainsboro;
+}
+
+
+/*自助DIV*/
+
+#QR_check_self {
+	float: left;
+	background: none;
+	width: 37%;
+	height: 100%;
+}
+
+
+/*自助收银img*/
+
+.QR_check_self_img img {
+	width: 50%;
+	margin: 50px 86px 10px;
+}
+
+
+/*近期收款titleDIV*/
+
+#QR_check_recent_title {
+	width: 100%;
+	height: 41px;
+	margin: auto;
+	z-index: 99999;
+}
+
+
+/*近期收款main*/
+
+#QR_check_recent_main {
+	width: 100%;
+	height: 302px;
+}

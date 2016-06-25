@@ -1,0 +1,99 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<form id="pagerForm" method="post" action="shangpin.html">
+	<input type="hidden" name="status" value="${param.status}">
+	<input type="hidden" name="keywords" value="${param.keywords}" />
+	<input type="hidden" name="pageNum" value="1" />
+	<input type="hidden" name="numPerPage" value="${model.numPerPage}" />
+	<input type="hidden" name="orderField" value="${param.orderField}" />
+</form>
+
+
+<div class="pageHeader">
+	<form onsubmit="return navTabSearch(this);" action="shangpin.html" method="post">
+	<div class="searchBar">
+		<ul class="searchContent">
+			<li>
+				<label>商品名称：</label>
+				<input type="text"/>
+			</li>
+			<dd><div class="button"><div class="buttonContent"><button>查询</button></div></div></dd>	
+		</ul>
+		
+		
+	</div>
+	</form>
+</div>
+<div class="pageContent">
+	<div class="panelBar">
+		<ul class="toolBar">
+			<li><a class="add" href="Testspaddpage5.html" target="dialog" mask="true"><span>添加</span></a></li>
+			<li><a class="delete" href="demo/common/ajaxDone.html?uid={sid_user}" target="ajaxTodo" title="确定要删除吗?"><span>删除</span></a></li>
+			<li><a class="edit" href="editpage5.html?uid={sid_user}" target="dialog" mask="true"><span>修改</span></a></li>
+			<li><a class="add" href="lookpage5.html?uid={sid_user}" target="dialog" mask="true"><span>查看</span></a></li>
+			<li class="line">line</li>
+		</ul>
+	</div>
+	<table class="table" width="100%" layoutH="114">
+		<thead>
+			<tr align="center">
+				
+				<th width="100">商品名称</th>
+				<th width="100">商品规格</th>
+				<th width="50">价格</th>
+				<th width="50">单位</th>
+				<th width="50">品牌</th>
+				<th width="80">类别</th>
+				<th width="80">状态</th>
+				<th width="80">创建时间</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr target="sid_user" rel="1" align="center">
+				<td>可乐</td>
+				<td>500ml</td>
+				<td>￥3:00</td>
+				<td>瓶</td>
+				<td>百事</td>
+				<td>零食-饮料</td>
+				<td>启用</td>
+				<td>2016-01-20</td>
+			</tr>
+			<tr target="sid_user" rel="1" align="center">
+				<td>可乐</td>
+				<td>330ml</td>
+				<td>￥3:00</td>
+				<td>罐</td>
+				<td>可口</td>
+				<td>零食-饮料</td>
+				<td>启用</td>
+				<td>2016-01-20</td>
+			</tr>
+			<tr target="sid_user" rel="1" align="center">
+				<td>可乐</td>
+				<td>500ml</td>
+				<td>￥3:00</td>
+				<td>瓶</td>
+				<td>可口</td>
+				<td>零食-饮料</td>
+				<td>停用</td>
+				<td>2016-01-20</td>
+			</tr>
+			
+		</tbody>
+	</table>
+	<div class="panelBar">
+		<div class="pages">
+			<span>显示</span>
+			<select class="combox" name="numPerPage" onchange="navTabPageBreak({numPerPage:this.value})">
+				<option value="20">20</option>
+				<option value="50">50</option>
+				<option value="100">100</option>
+				<option value="200">200</option>
+			</select>
+			<span>条，共${totalCount}条</span>
+		</div>
+		
+		<div class="pagination" targetType="navTab" totalCount="200" numPerPage="20" pageNumShown="10" currentPage="1"></div>
+
+	</div>
+</div>

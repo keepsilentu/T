@@ -1,0 +1,216 @@
+<meta charset="utf-8" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script src="myjs/addsp.js" type="text/javascript"></script>
+<script src="myjs/sp.js" type="text/javascript"></script>
+
+<div class="pageContent">
+	<form method="post" action="demo/common/ajaxDone.html" class="pageForm required-validate" onsubmit="return validateCallback(this, navTabAjaxDone);">
+		<div class="pageFormContent" layoutH="56">
+			<p>
+				<label>选择类目：</label>
+				<select class="combox" name="province" ref="w_combox_city" refUrl="demo/combox/city_{value}.html" style="width: 200px;">
+		<option value="all">一级类目</option>
+		<option value="bj">服装</option>
+		<option value="sh">电子</option>
+		<option value="sh">电子</option>
+		<option value="sh">电子</option>
+		<option value="sh">电子</option>
+	
+	
+	</select>
+	<select class="combox" name="city" id="w_combox_city" ref="w_combox_area" refUrl="demo/combox/area_{value}.html">
+		<option value="all">二级类目</option>
+		<option value="bj">女装</option>
+		<option value="sh">男装</option>
+		<option value="sh">男装</option>
+		<option value="sh">男装</option>
+		<option value="sh">男装</option>
+		<option value="sh">男装</option>
+		<option value="sh">男装</option>
+		
+	</select>
+	<select class="combox" name="area" id="w_combox_area">
+		<option value="all">三级类目</option>
+		<option value="bj">休闲</option>
+		<option value="sh">西装</option>
+		<option value="sh">西装</option>
+		<option value="sh">西装</option>
+		<option value="sh">西装</option>
+		<option value="sh">西装</option>
+		<option value="sh">西装</option>
+	
+		
+	</select>
+	</p>
+	
+	<p>
+				<label>商品名称：</label>
+				<input name="sn" class="required" type="text" size="30" placeholder="请输入名称"/>
+			</p>	
+
+			<p style="line-height: 21px; height: auto; width: 540px; margin-top: 10px;">
+		<label>商品属性：</label>		
+<table id="addTable" style="margin-left: 128px; width:540px;">
+
+<tbody id="templeteTBody" style="display: none; width: 205px;    float: left;">
+
+<tr>
+
+
+
+<td style="width: 50px;">品牌</td>
+
+<td><select  style="width: 100px;">
+	<option>选择品牌</option>
+		<!--<a onclick="return false" href="addpage2.html">删除</a>-->
+	<option>耐克</option>
+	<option>乔丹</option>
+	<option>乔丹</option>
+	<option>自定义</option>
+</select></td>
+
+<!--
+<td>b</td>
+
+<td><input type="text" /></td>-->
+<td><input type="button" value="删除" onclick="deleteRow(this)"/></td>
+</tr>
+
+
+</tbody>
+
+<tbody id="footTbody">
+</tbody>
+
+</table>
+		
+			<label><br /></label>
+			<input type="text" style="width: 150px; margin-top: 15px;"   placeholder="请输入属性名"/>
+			<input type="text" style="width: 150px; margin-left: 20px;  margin-top: 15px;"   placeholder="请输入属性值"/>
+			<!--<button style="height: 25px; margin-top: -2px;">添加</button>-->
+			<input type="button" value="增加" onclick="setValue()" style="height: 25px; margin-top: 13px;margin-left: 21px;">
+		</p>
+		<p>
+			<label>规格：</label>
+			<div class="guige" style="width: 440px; margin-left: 130px; margin-top: 50px;">
+			<p>
+			<strong>颜色</strong>
+			<a >编辑</a>
+			</p>
+			
+			<label>
+			<input type="checkbox"></input>
+			<span>白色</span>
+			</label>
+			<label>
+			<input type="checkbox"></input>
+			<span>红色</span>
+			</label>
+		    <label>
+			<input type="checkbox"></input>
+			<span>黃色</span>
+			</label>
+			<label>
+			<input type="checkbox"></input>
+			<span>紫色</span>
+			</label>
+			<p>
+			<strong>尺寸</strong>
+			<a >编辑</a>
+			</p>
+			
+			<label>
+			<input type="checkbox"></input>
+			<span>35</span>
+			</label>
+			<label>
+			<input type="checkbox"></input>
+			<span>36</span>
+			</label>
+			<label>
+			<input type="checkbox"></input>
+			<span>37</span>
+			</label>
+			<label>
+			<input type="checkbox"></input>
+			<span>38</span>
+			</label>
+		<p>
+	
+		
+<input type="text" style="width: 150px;"  placeholder="请输入规格名" />
+
+<input type="text" style="width: 150px; margin-left: 20px;"  placeholder="请输入规格值" />
+<!--//页面代码
+-->
+<input type="button" value="增加" onclick="setValue1()"  style="height: 25px; margin-top: -3px;margin-left: 21px;"  />
+
+
+<table id="addTable1">
+
+<tbody id="templeteTBody1" style="display: none; float: left;" >
+
+<tr>
+
+<td><input type="button" value="删除" onclick="deleteRow1(this)" value="红色"/>红色</td>
+</tr>
+
+
+
+</tbody>
+
+<tbody id="footTbody1">
+</tbody>
+
+</table>
+
+    <label>  
+    	
+<div id="handle11" style="display: none; margin-left:46px; background-color: #44b548 ; text-align: center; line-height: 32px; color: #F8F4E1; width: 339px; height: 32px;">操作成功</div>
+	<!--<input type="button" id="btn1" value="确定" />-->
+	<button onclick="tcc()" type="button" id="btn11">确定</button>
+	<a href="">取消</a>	
+	
+
+			
+</label>
+			
+		</p>
+		</div>
+			<p>
+				<label>价格：</label>
+				<input name="name"  type="text" size="30"  placeholder="请输入价格"/>
+			</p>
+			<p>
+				<label>单位：</label>
+				<select name="select">
+                <option value="">选择单位</option>
+                <option value="">瓶</option>
+                <option value="">斤</option>
+                 <option value="">个</option>
+                  <option value="">台</option>
+                </select>
+			</p>
+			
+		
+			
+			
+			<p>
+				<label>状态：</label>
+				<select name="select">
+                <option value="">启用</option>
+                <option value="">停用</option>
+                </select>
+			</p>
+		</div>
+		<div class="formBar">
+			<ul>
+				<!--<li><a class="buttonActive" href="javascript:;"><span>保存</span></a></li>-->
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+				<li>
+					<div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div>
+				</li>
+			</ul>
+		</div>
+	</form>
+</div>

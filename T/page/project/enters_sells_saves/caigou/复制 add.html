@@ -1,0 +1,147 @@
+<meta charset="utf-8" />
+<script type="text/javascript">
+/*
+*增加模板行
+*/
+
+function addRow() {
+var table = document.getElementById("addTable");
+var tbody = document.getElementById("templeteTBody");
+var newTBody = tbody.cloneNode(true);
+newTBody.style.display="";
+var footTBody = document.getElementById("footTbody");
+return table.insertBefore(newTBody,footTBody);
+}
+/*
+*删除模板行
+*/
+
+function deleteRow(obj) {
+var tbody = obj.parentNode.parentNode.parentNode;
+var table = document.getElementById("addTable");
+table.removeChild(tbody);
+}
+
+/**
+*向模板中填充值
+*/
+function setValue(){
+
+var tbody=addRow();
+
+}
+
+</script>
+<form id="pagerForm" method="post" action="demo_page1.html">
+	<input type="hidden" name="status" value="${param.status}">
+	<input type="hidden" name="keywords" value="${param.keywords}" />
+	<input type="hidden" name="pageNum" value="1" />
+	<input type="hidden" name="numPerPage" value="${model.numPerPage}" />
+	<input type="hidden" name="orderField" value="${param.orderField}" />
+</form>
+
+
+<div class="pageHeader">
+	<form onsubmit="return navTabSearch(this);" action="demo_page1.html" method="post">
+	<div class="searchBar">
+		<!--<ul class="searchContent">
+			<li>
+				<label>我的客户：</label>
+				<input type="text"/>
+			</li>
+			<li>
+			<select class="combox" name="province">
+				<option value="">所有省市</option>
+				<option value="北京">北京</option>
+				<option value="上海">上海</option>
+				<option value="天津">天津</option>
+				<option value="重庆">重庆</option>
+				<option value="广东">广东</option>
+			</select>
+			</li>
+		</ul>
+		-->
+		<h1 style="text-align: center;">采购订单</h1>
+		<li>
+		<table class="searchContent">
+			<tr>
+				<td>
+					供应商：<select style="width: 100px;">
+						<option value="all">一点点</option>
+		<option value="bj">智惠联盟</option>
+		<option value="sh">智汇联通</option>
+					</select>
+				</td>
+				<td>
+					采购人：<select style="width: 100px;">
+						<option value="all">张三</option>
+		<option value="bj">李四</option>
+		<option value="sh">马化腾</option>
+					</select>
+				</td>
+				<td>
+					采购日期：<input type="text" class="date"  style="width: 100px;" />
+				</td>
+				<td>
+				备注:<input type="text" style="width: 100px;" />
+				</td>
+			</tr>
+		</table>
+		
+	</div>
+	</form>
+</div>
+<div class="pageContent">
+	<div class="panelBar">
+		<ul class="toolBar">
+			<li><input type="button" value="增加" onclick="setValue()"></li>
+			<li><a class="delete" href="demo/common/ajaxDone.html?uid={sid_user}" target="ajaxTodo" title="确定要删除吗?"><span>删除</span></a></li>
+			
+		</ul>
+	</div>
+	<table id="addTable" class="table" width="100%" layoutH="138">
+		<thead>
+			<tr style=" text-align:center">
+				<th width="80">采购单号</th>
+				<th width="120">供应商</th>
+				<th width="50">联系人</th>
+				<th width="100">联系方式</th>
+				<th width="150">交货地址</th>
+				<th width="80">交货时间</th>
+				<th width="80">总价</th>
+				<th width="80">采购人</th>
+			</tr>
+		</thead>
+		<tbody id="templeteTBody" style="display: none;">
+			<tr target="sid_user" rel="1" style="text-align: center;">
+				<td>10021021</td>
+				<td>壹点点</td>
+				<td>马云</td>
+				<td>139456798797</td>
+				<td>芒果网大厦</td>
+				<td>2016-02-17</td>
+				<td>10000</td>
+				<td>马化腾</td>
+			</tr>
+			
+		</tbody>
+		<tbody id="footTbody">
+</tbody>
+
+	</table>
+	<div class="panelBar">
+		<div class="pages">
+			<span>显示</span>
+			<select class="combox" name="numPerPage" onchange="navTabPageBreak({numPerPage:this.value})">
+				<option value="20">20</option>
+				<option value="50">50</option>
+				<option value="100">100</option>
+				<option value="200">200</option>
+			</select>
+			<span>条，共${totalCount}条</span>
+		</div>
+		
+		<div class="pagination" targetType="navTab" totalCount="200" numPerPage="20" pageNumShown="10" currentPage="1"></div>
+
+	</div>
+</div>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+		<title>已关注用户点击花红包</title>
+		<script src="js/jquery1.8.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+	</head>
+
+	<body>
+		<div class="wrapper" style="background-image: url(img/index.png); background-size: 100% 100%;">
+
+			<!--已关注用户点击花红包首页提示获得红包金额框-->
+			<div class="urp-get-tips">
+				<img id="urp-x1" src="img/x.png" />
+				<img id="urp-get-tips-img" src="img/06.png" alt="领取" width="80%" height="50%" />
+				<span id="urp-get-tips-span">恭喜你已获得<span>XXX</span>元红包</span>
+			</div>
+		</div>
+		</div>
+
+		<script type="text/javascript">
+			//		关闭XX
+			$(function() {
+				$("#urp-x1").on("click", function() {
+					$(".urp-get-tips").css("display", "none");
+				})
+			})
+		</script>
+	</body>
+
+</html>

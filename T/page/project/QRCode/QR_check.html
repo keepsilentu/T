@@ -1,0 +1,169 @@
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="css/TBstyle.css" />
+<link rel="stylesheet" type="text/css" href="css/Dialog.css" />
+
+<script src="js/jquery1.8.js" type="text/javascript"></script>
+<script src="js/Dialog.js" type="text/javascript" ></script>
+        	
+    <!--背景遮盖层-->
+    <div class="DialogBack" id="light1"></div>
+   
+<div class="QRbody">
+	
+	
+<!--弹出收款详情窗口-->
+   <div class="Dialog" style="padding: 10px;" id="light">
+	<a onclick="hide('light1','light')"><img src="img/remove.ico"></a>
+	<div class="Dialog_main">
+	<p class="QR_check_h_title" align="center">收款详情</p>
+			<p><span style="font-family: '微软雅黑'; font-size: 20px; font-weight: bold; margin-left: 30px;">金额：</span>
+				<span style="float: right;">￥1000000.00</span>
+			</p>
+	<hr />
+	<table class="Dialog_main_table" style="text-align: right;">
+		
+		<tbody>
+		   
+			<tr>
+				<th>当前状态：</th>
+				<td>已支付</td>
+			</tr>
+			<tr>
+				<th>交易时间：</th>
+				<td>2016-03-18 10:24</td>
+			</tr>
+			<tr>
+				<th>支付方式：</th>
+				<td>微信支付</td>
+			</tr>
+			<tr>
+				<th>交易凭证号：</th>
+				<td>10084815465454646516546461</td>
+			</tr>
+		</tbody>
+	</table>
+	<p align="center" class="QR_a" onclick="hide()">关闭</p>
+	</div>
+</div>
+
+<!--弹出退款窗口-->
+<div class="Dialog" id="refund">
+	<!--弹出窗口标题-->
+	<div class="Dialog_title">
+	<p style="margin-top: 0px; height: 46px;"><span class="QR_check_h_title" style="line-height: 46px;">退     款</span>
+	<span><a onclick="hide('refund')"><img src="img/remove.ico"></a></span>
+	</p>
+	</div>
+	<!--弹出窗口内容-->
+	<div class="Dialog_main">
+	<table class="Dialog_main_table" id="table1">
+		
+		<tbody>
+		    
+		    <tr>
+			<th>交易凭证号：</th>
+			<td>100968156456156465165164</td>
+			</tr>
+			<tr>
+				<th>退款金额：</th>
+				<td>￥100000.00</td>
+			</tr>
+			<tr>
+				<th>支付方式：</th>
+				<td>微信支付</td>
+			</tr>
+			<tr>
+				<th>用户密码：</th>
+				<td style="color: red;"><input type="password" name="password"/> <span id="password1" style="display: none;"><img src="img/log1.png" style="height: 11px;"/>密码错误</span></td>
+			</tr>
+			
+	</table>
+	<p><span style="font-size: 13px; padding: 10px; color: red;">提示：请先确认交易凭证号及金额无误！以免进行失误操作。</span></p>
+	<p><span class="QR_a" onclick="hide()" style="float: left; margin-left: 50px;">确认</span><span style="float: right; margin-right: 50px;" class="QR_a_1" onclick="hide()">取消</span></p>
+	</div>
+</div>
+
+<!--下载二维码-->
+<div class="QR_check_box">
+	<div id="QR_check_self">
+		<div class="QR_check_self_img"> <img src="img/126x176.jpg"/>
+			<p align="center"><a href="img/126x176.jpg" target="_blank" class="QR_a_href">下载二维码</a></p>
+	</div>		
+	</div>
+	
+</div>
+
+
+<!--近期收款main-->
+<div id="QR_check_recent_main">
+	<!--近期收款title-->
+<div id="QR_check_recent_title">
+	<p class="QR_check_p_title">
+		<h class="QR_check_h_title">最新收款</h>
+		<span style="float: right; margin-top: 15px; margin-right: 16px;">
+		<a class="QR_a_href" href="QR_log.html" target="QR">查看全部</a>
+		<i>丨</i>
+			<a class="QR_a_href" href="QR_check.html">刷新列表</a>
+		</span>
+	</p>
+	<hr>
+</div>
+<table class="QR_table" width="100%">
+	<thead>
+		<tr>
+			    <th width="20"></th>
+			    <th width="100">交易凭证号</th>
+				<th width="70">金额</th>
+				<th width="50">支付方式</th>
+				<th width="120">交易时间</th>
+				<th width="50">状态</th>
+				<th width="100">操作</th>
+		</tr>
+	</thead>
+	<tbody>
+			<tr rel="1" align="center">
+				<td><li style="color: red;"></li></td>
+				<td>2015466516546</td> 
+				<td>￥3:00</td>
+				<td>微信支付</td>
+				<td>2016-03-18 10:58:26</td>
+				<td>支付成功</td>
+				<td><a class="QR_a_href" onclick="show('light','light1')">详情</a></td>	
+			</tr>
+			<tr rel="1" align="center">
+				<td><li style="color: red;"></li></td>
+				<td>2015466516546</td>
+				<td>￥3:00</td>
+				<td>微信支付</td>
+				<td>2016-03-18 10:58:26</td>
+				<td>支付成功</td>
+				<td><a class="QR_a_href" onclick="show('light','light1')">详情</a></td>	
+			</tr>
+			<tr rel="1" align="center">
+				<td><li style="color: red;"></li></td>
+				<td>2015466516546</td>
+				<td>￥3:00</td>
+				<td>微信支付</td>
+				<td>2016-03-18 10:58:26</td>
+				<td>支付成功</td>
+				<td><a class="QR_a_href" onclick="show('light','light1')">详情</a></td>	
+			</tr>
+	
+</table>
+</div>
+
+
+<footer><hr></footer>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0" />-->
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<link rel="stylesheet" type="text/css" href="css/market-trend.css"/>
+		<script src="js/jquery1.8.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../../layer/layer.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../../layer/extend/layer.ext.js" type="text/javascript" charset="utf-8"></script>
+		
+		<title>技术支持</title>
+	</head>
+	<body>
+		<div class="top">
+				<div class="top-menu">
+					<ul>
+						<li class="logo-li">
+							<a href="index.html"><img src="../../project/qr-mobile/m_img/logo.png" class="logo" />
+							</a>
+						</li>
+						<li><a href="index.html">首页</a></li>
+						<li><a href="company.html">关于我们</a></li>
+						<li><a href="market-trend.html">市场动向</a></li>
+						<li><a href="company-policy.html">招商政策</a></li>
+						<li><a href="fae-support.html" class="top-menu-a">技术支持</a></li>
+						<li><a href="join-us.html">加入我们</a></li>
+					</ul>
+			    </div>
+		</div>
+		
+		<div class="main">
+			
+			<div class="market-trend">
+				<div class="fae-support-tab">
+					<div class="fae-support-tab-product">产品介绍</div>
+					<div class="fae-support-tab-usedt">使用说明</div>
+				</div>
+				
+				<!--产品页DIV-->
+			  <div class="fae-support-product">
+				<!--产品介绍页每一横排div-->
+			    <div class="fae-support-tab-product-main">
+			    	<div class="fae-support-tab-product-main-left">
+			    		<img src="img/pos1.jpg"/>
+			    		<div class="fae-support-tab-product-title">智能刷卡pos机</div>
+			    		<div class="fae-support-tab-product-content">Y-box支持零售业销售数据实时连接分析解决方案，可协助商业管理机构采集POS机向打印机发出的每笔打印数据，从中解析出交易信息。</div>
+			    	</div> 
+			    	<div class="fae-support-tab-product-main-right">
+			    		<img src="img/pro12-pic1 (1).jpg"/>
+			    		<div class="fae-support-tab-product-title">BOX</div>
+			    		<div class="fae-support-tab-product-content">Y-box支持零售业销售数据实时连接分析解决方案，可协助商业管理机构采集POS机向打印机发出的每笔打印数据，从中解析出交易信息。</div>
+			    	</div>
+			    </div>
+			    
+			    <!--产品介绍页每一横排div-->
+			    <div class="fae-support-tab-product-main">
+			    	<div class="fae-support-tab-product-main-left">
+			    		<img src="img/pro13-pic1.jpg"/>
+			    		<div class="fae-support-tab-product-title">收银机</div>
+			    		<div class="fae-support-tab-product-content">Y-box支持零售业销售数据实时连接分析解决方案，可协助商业管理机构采集POS机向打印机发出的每笔打印数据，从中解析出交易信息。</div>
+			    	</div> 
+			    	<div class="fae-support-tab-product-main-right">
+			    		<img src="img/pro15-pic1.jpg"/>
+			    		<div class="fae-support-tab-product-title">移动POS</div>
+			    		<div class="fae-support-tab-product-content">Y-box支持零售业销售数据实时连接分析解决方案，可协助商业管理机构采集POS机向打印机发出的每笔打印数据，从中解析出交易信息。</div>
+			    	</div>
+			    </div>
+			  </div><!--产品页面div尾部-->
+			  
+			  <!--使用说明div-->
+			  <div class="fae-support-usedt">
+			  	<img src="img/usedtimg1.jpg" width="100%"/>
+			  </div><!--使用说明div尾部-->
+			  
+			  
+			</div>
+			
+		</div>
+		<div class="foot">深圳市壹点点信息技术有限公司</div>
+		
+		
+		
+		
+		<script type="text/javascript">
+			layer.ready(function(){ //为了layer.ext.js加载完毕再执行
+  layer.photos({
+    photos: '.fae-support-tab-product-main'
+  });
+  layer.photos({
+    photos: '.fae-support-usedt'
+  });
+}); 
+
+            $(function(){
+            	$(".fae-support-tab-product").on("click",function(){
+            		$(".fae-support-product").css("display","block");
+        $(".fae-support-usedt").css("display","none"); 
+        $(".fae-support-tab-product").css("border-bottom","2px solid dodgerblue")
+        $(".fae-support-tab-usedt").css("border-bottom","none")
+            	})
+            	
+    $(".fae-support-tab-usedt").on("click",function(){
+            		$(".fae-support-usedt").css("display","block");
+        $(".fae-support-product").css("display","none"); 
+        $(".fae-support-tab-usedt").css("border-bottom","2px solid dodgerblue")
+        $(".fae-support-tab-product").css("border-bottom","none")
+            	})        	
+            	
+            })
+
+
+		</script>
+		
+		
+		
+		
+		
+		
+		
+	</body>
+</html>

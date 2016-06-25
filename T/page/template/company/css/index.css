@@ -1,0 +1,49 @@
+.index-main{
+	/*position: absolute;*/
+	/*z-index: 10;*/
+	width: 100%;
+	height: 100%;
+	background-image: url(../img/index-3.png);
+	/*background-image: url(/T/page/template/company/img/DSC_8679.JPG);*/
+	/*background-image: url(../img/index2.jpg);*/
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.index-main-nav{
+	position: absolute;
+	left: 50%;
+	bottom: 50px;
+	margin-left: -50px;
+	text-align: center;
+	min-width: 780px;
+}
+#index-main-nav-1{
+	background-color: red;
+}
+.index-main-nav span{
+	display: block;
+	float: left;
+	margin: 5px;
+	width: 20px;
+	height: 20px;
+	border-radius: 10px;
+	cursor: pointer;
+	background-color: greenyellow;
+}
+
+.index-main-content{
+	width: 50%;
+	margin: auto;
+	position: relative;
+	top: 20%;
+}
+
+.index-main-content span{
+	text-align: center;
+	width: 50%; 
+	margin: auto;
+	display: block;
+	font-size: 36px;
+	color: white;
+}

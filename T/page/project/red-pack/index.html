@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+		<title>红包首页</title>
+		<script src="js/jquery1.8.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/nav.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/link.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	</head>
+	<body>
+		<div class="wrapper">
+		  <div class="top">
+		  	<span class="my-red-pack">我的红包</span>
+		  	<span class="go-red-pack" id="home-go-red-pack">去发红包</span>
+		  	<div class="nav">
+		  	<p id="nav-left">
+		  		<span>40.00元</span>
+		  		<span id="nav-left-span2">收到4个</span>
+		  	</p>
+		  	<p id="nav-right">
+		  		<span>50.00元</span>
+		  		<span id="nav-right-span2">发出5个</span>
+		  	</p>
+		  </div>
+		  </div>
+		  
+		  <div class="main">
+		  	
+		  	<!--左边nav-->
+		  	<ul id="nav-left-ul">
+		  		<li class="spell-red-pack">
+		  			<span class="nav-left-span">
+		  				<p>爱丽丝<img src="img/01.png" width="20px"></p>
+		  				<p class="main-time">2015-12-25 17:56:55</p>
+		  			</span>
+		  			<span class="nav-right-span-best">
+		  				<p>100.00元</p>
+		  				<p><img src="img/02.png"/></p>
+		  			</span>
+		  		</li>
+		  		<li class="normal-red-pack">
+		  			<span class="nav-left-span">
+		  				<p>周杰伦</p>
+		  				<p class="main-time">2015-12-25 17:56:55</p>
+		  			</span>
+		  			<span class="nav-right-span">
+		  				<p>8.99元</p>
+		  			</span>
+		  		</li>
+		  		<li class="normal-red-pack">
+		  			<span class="nav-left-span">
+		  				<p>周杰伦</p>
+		  				<p class="main-time">2015-12-25 17:56:55</p>
+		  			</span>
+		  			<span class="nav-right-span">
+		  				<p>8.99元</p>
+		  			</span>
+		  		</li>
+		  		
+		  		<li class="normal-red-pack">
+		  			<span class="nav-left-span">
+		  				<p>周杰伦</p>
+		  				<p class="main-time">2015-12-25 17:56:55</p>
+		  			</span>
+		  			<span class="nav-right-span">
+		  				<p>8.99元</p>
+		  			</span>
+		  		</li>
+		  		<li class="spell-red-pack">
+		  			<span class="nav-left-span">
+		  				<p>爱丽丝<img src="img/01.png" width="20px"></p>
+		  				<p class="main-time">2015-12-25 17:56:55</p>
+		  			</span>
+		  			<span class="nav-right-span-best">
+		  				<p>100.00元</p>
+		  				<p><img src="img/02.png"/></p>
+		  			</span>
+		  		</li>
+		  		<li class="spell-red-pack">
+		  			<span class="nav-left-span">
+		  				<p>爱丽丝<img src="img/01.png" width="20px"></p>
+		  				<p class="main-time">2015-12-25 17:56:55</p>
+		  			</span>
+		  			<span class="nav-right-span-best">
+		  				<p>100.00元</p>
+		  				<p><img src="img/02.png"/></p>
+		  			</span>
+		  		</li>
+		  		<li class="normal-red-pack">
+		  			<span class="nav-left-span">
+		  				<p>周杰伦</p>
+		  				<p class="main-time">2015-12-25 17:56:55</p>
+		  			</span>
+		  			<span class="nav-right-span">
+		  				<p>8.99元</p>
+		  			</span>
+		  		</li>
+		  		<li class="normal-red-pack">
+		  			<span class="nav-left-span">
+		  				<p>周杰伦</p>
+		  				<p class="main-time">2015-12-25 17:56:55</p>
+		  			</span>
+		  			<span class="nav-right-span">
+		  				<p>8.99元</p>
+		  			</span>
+		  		</li>
+		  		
+		  	</ul>
+		  	
+		  	<!--右边nav-->
+		  	<ul id="nav-right-ul" style="display: none;">
+		  		<li>
+		  			<span class="nav-left-span">
+		  				<p>拼手气红包</p>
+		  				<p class="main-time">2015-12-25 17:56:55</p>
+		  			</span>
+		  			<span class="nav-right-span">
+		  				<p>100.00元</p>
+		  			</span>
+		  		</li>
+		  		<li>
+		  			<span class="nav-left-span">
+		  				<p>拼手气红包</p>
+		  				<p class="main-time">2015-12-25 17:56:55</p>
+		  			</span>
+		  			<span class="nav-right-span">
+		  				<p>100.00元</p>
+		  			</span>
+		  		</li>
+		  		<li>
+		  			<span class="nav-left-span">
+		  				<p>普通红包</p>
+		  				<p class="main-time">2015-12-25 17:56:55</p>
+		  			</span>
+		  			<span class="nav-right-span">
+		  				<p>8.99元</p>
+		  			</span>
+		  		</li>
+		  	</ul>
+		  </div>
+		</div>
+	</body>
+</html>

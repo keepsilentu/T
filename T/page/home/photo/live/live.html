@@ -1,0 +1,59 @@
+<style type="text/css">
+	.left-photo-live{
+		height: 100%;
+		width: 100%;
+		background-image:url(/T/img/u=3682172926,1147736032&fm=21&gp=0.jpg);
+	}
+	
+	.left-photo-live img{
+		float: left;
+		width: 20%;
+		margin-left: 4%;
+		margin-top: 5%;
+		border-radius: 10px;
+		cursor: pointer;
+		/*border:15px solid transparent;
+		-moz-border-image:url(/T/img/10961577,400,300.jpg) 30 30 stretch;
+        -webkit-border-image:url(/T/img/10961577,400,300.jpg) 30 30 stretch;
+        -o-border-image:url(/T/img/10961577,400,300.jpg) 30 30 stretch;	
+        border-imageurl(/T/img/10961577,400,300.jpg) 30 30 stretch;*/
+	}
+</style>
+<div class="left-photo-live">
+  
+  <img  layer-pid="图片id，可以不写" layer-src="/T/img/1461049236517.jpg" src="/T/img/1461049236517.jpg" width="100%" height="100%"/>
+  <img layer-pid="图片id，可以不写" layer-src="/T/img/HRtuQo8.jpg" src="/T/img/HRtuQo8.jpg" width="100%" height="100%"/>
+  <img layer-pid="图片id，可以不写" layer-src="/T/img/N7ETzFO.jpg" src="/T/img/N7ETzFO.jpg" width="100%" height="100%"/>
+  <img layer-pid="图片id，可以不写" layer-src="/T/img/start_page.jpg" src="/T/img/start_page.jpg" width="100%" height="100%"/>
+  <img layer-pid="图片id，可以不写" layer-src="/T/img/top.jpg" src="/T/img/top.jpg" width="100%" height="100%"/>
+  
+
+</div>
+
+
+<script type="text/javascript">
+			layer.ready(function(){ //为了layer.ext.js加载完毕再执行
+  layer.photos({
+    photos: '.left-photo-live'
+  });
+}); 
+		</script>
+
+
+
+
+<script type="text/javascript">
+  $(function(){
+    var a=$(".left-photo-live img");
+    var c=a.css("width");
+    a.css("height",c);
+//  a.style.height = width+"px";
+  });
+  
+  $(window).resize(function(){
+  	var a=$(".left-photo-live img");
+    var c=a.css("width");
+    a.css("height",c);
+  });
+  
+</script>

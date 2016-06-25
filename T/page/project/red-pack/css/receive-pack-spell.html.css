@@ -1,0 +1,48 @@
+
+/*领取金额*/
+.my-red-money{
+	width: 100%;
+	font-size: 36px;
+	display: block;
+	position: absolute;
+	bottom: 76px;
+	color: #D22A24;
+}
+
+/*新年快乐附带语句*/
+.my-red-ana{
+	width: 100%;
+	font-size: 13px;
+	display: block;
+	position: absolute;
+	bottom: 55px;
+	color: #D22A24;
+}
+
+/*已存入你的会员余额*/
+.my-red-tips{
+	width: 100%;
+	font-size: 11px;
+	display: block;
+	position: absolute;
+	bottom: 42px;
+	color: #333333;
+}
+/*共多少元,已领取多少个*/
+.share-pack{
+	position: absolute;
+	width: 100%;
+	bottom: 0px;
+	height: 40px;
+	text-align: left;
+	line-height: 40px;
+	color: #808080;
+	text-indent: 1.4em;
+	font-size: 13px;
+	background-color: #EBEBEB;
+}
+#send-on{
+	float: right;
+	text-indent: -4.5em;
+	color: #D22A24;
+}

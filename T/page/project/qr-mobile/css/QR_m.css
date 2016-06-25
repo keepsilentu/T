@@ -1,0 +1,100 @@
+	/*键盘DIV*/
+	
+	body{
+		margin:0 auto;
+		padding: 0px;
+		background: #eaebf0;
+		}
+			#key2{
+				width: 100%;
+				 position:absolute; bottom:0%;
+				}
+			#key {
+				float: left;
+				width: 75%;
+				height: 100%;
+				background: white;
+			}
+			
+			#key a:active {
+				background-color: gainsboro;
+			}
+						
+			#key a {
+				color: #3c4a69;
+				border: 1px solid #EDEDED;
+				font-family: "方正中等线简体常规";
+                font-size: 33px;
+                height: 55px;
+                line-height: 55px;
+				cursor: pointer;
+				text-decoration: none;
+				float: left;
+				width: 32.4%;	
+				background: white;
+				outline: none;
+	            -webkit-tap-highlight-color: transparent;
+	            -webkit-touch-callout: none;
+	            -webkit-user-select: none;
+			}
+			
+			/*键盘单个删除*/
+			.del{
+				background: white; border-top: 1px solid #EDEDED; border-bottom: 1px solid #EDEDED; height: 55px;"
+			}
+	
+	
+	.OKbtn{
+		background: white; border-top: 1px solid #EDEDED; height: 168px;
+	}
+			/*中间图片*/
+			.m_logo {
+				width: 100%;
+				margin: center;
+				margin-top: 10%;
+			}
+			.del:active{
+				background: #ff6634;
+			}
+			
+			.right a:active img{filter:alpha(Opacity=80);-moz-opacity:0.8;opacity: 0.8;
+			} 
+			
+			
+			
+			
+			/*指示线*/
+			#myInput em{height:30px; margin-top: 8px; border-left:2px solid #ccc;
+			animation: identifier 1s infinite	;
+			-moz-animation: identifier 1s infinite	;	
+			-webkit-animation: identifier 1s infinite	;	
+			-o-animation: identifier 1s infinite	;}
+			#myInput{height:45px; width: 60%; font-family: "arial narrow"; font-size: 28px;}
+		    #myInput:after{content:"";display:block;clear:both;}
+			#myInput span{height:45px;}
+			
+			
+		@-webkit-keyframes identifier {
+			0% { border-color:transparent; }
+			50% { border-color:transparent; }
+			100% { border-color:#ccc; }
+		}
+		@-o-keyframes identifier {
+			0% { border-color:transparent; }
+			50% { border-color:transparent; }
+			100% { border-color:#ccc; }
+		}
+		@-moz-keyframes identifier {
+			0% { border-color:transparent; }
+			50% { border-color:transparent; }
+			100% { border-color:#ccc; }
+		}
+		@keyframes identifier {
+			0% { border-color:transparent; }
+			50% { border-color:transparent; }
+			100% { border-color:#ccc; }nt; }
+			to { border-color:#ccc; }
+		}
+			
+			
+	

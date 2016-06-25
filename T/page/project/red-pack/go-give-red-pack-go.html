@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+		<title>红包已包好，发红包</title>
+		<script src="js/jquery1.8.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/link.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/shade.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="css/go-give-red-pack-go.css"/>
+	</head>
+	<body>
+		<div class="wrapper">
+			<!--遮盖层-->
+			<div class="shade-div"></div>
+			<!--红包弹窗-->
+			<div class="red-pack--dialog">
+				<span class="red-pack-dialog-title">我的红包</span>
+				<span class="red-pack-dialog-main">红包已发送成功</span>
+			</div>
+			
+			<!--第三层遮罩层DIV-->
+			<div id="red-pack-share-send">
+				<img src="img/jiantou.png" id="red-pack-share-send-img"/>
+				<div style="margin-top: 40%;">
+				  <span>请点击右上角</span>
+				  <span>选择发送给指定朋友</span>
+				  <span>或分享到朋友圈</span>
+				</div>
+			</div>
+		  <div class="top">
+		  	<span class="my-red-pack">红包已包好</span>	
+		  </div>
+		  <div class="main" style="background-color: #AD2D27;">
+		  	<div style="text-align: center;">
+		  		<img id="red-pack-share-send-fa" src="img/fa.png" alt="拆红包" width="150px"/>
+		  	</div>
+		  	<span class="red-pack-tips">注：红包可用于购买商城所有商品</span>
+		  </div>
+		</div>
+	</body>
+</html>

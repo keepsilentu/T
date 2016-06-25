@@ -1,0 +1,103 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<form id="pagerForm" method="post" action="client.html">
+	<input type="hidden" name="status" value="${param.status}">
+	<input type="hidden" name="keywords" value="${param.keywords}" />
+	<input type="hidden" name="pageNum" value="1" />
+	<input type="hidden" name="numPerPage" value="${model.numPerPage}" />
+	<input type="hidden" name="orderField" value="${param.orderField}" />
+</form>
+
+
+<div class="pageHeader">
+	<form onsubmit="return navTabSearch(this);" action="client.html" method="post">
+	<div class="searchBar">
+		<!--<ul class="searchContent">
+			<li>
+				<label>我的客户：</label>
+				<input type="text"/>
+			</li>
+			<li>
+			<select class="combox" name="province">
+				<option value="">所有省市</option>
+				<option value="北京">北京</option>
+				<option value="上海">上海</option>
+				<option value="天津">天津</option>
+				<option value="重庆">重庆</option>
+				<option value="广东">广东</option>
+			</select>
+			</li>
+		</ul>
+		-->
+		
+	</div>
+	</form>
+</div>
+<div class="pageContent">
+	<div class="panelBar">
+		<ul class="toolBar">
+			<li><a class="add" href="addpage4.html" target="dialog" mask="true"><span>添加</span></a></li>
+			<li><a class="delete" href="demo/common/ajaxDone.html?uid={sid_user}" target="ajaxTodo" title="确定要删除吗?"><span>删除</span></a></li>
+			<li><a class="edit" href="addpage4.html?uid={sid_user}" target="dialog" mask="true"><span>修改</span></a></li>
+			<li class="line">line</li>
+		</ul>
+	</div>
+	<table class="table" width="100%" layoutH="89">
+		<thead>
+			<tr align="center">
+				
+				<th width="120">客户名称</th>
+				<th width="100">业务员</th>
+				<th width="100">联系人</th>
+				<th width="80">联系电话</th>
+				<th width="80">邮箱</th>
+				<th width="150">地址</th>
+				<th width="150">备注</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr target="sid_user" rel="1" align="center">
+				<td>图图大酒店</td>
+				<td>涂斌</td>
+				<td>图图</td>
+				<td>13926570904</td>
+				<td>503925002@qq.com</td>
+				<td>深圳市南山区科技园南区芒果网大厦702</td>
+				<td>五星级大酒店</td>
+			</tr>
+			<tr target="sid_user" rel="1" align="center">
+				<td>图图大酒店</td>
+				<td>涂斌</td>
+				<td>图图</td>
+				<td>13926570904</td>
+				<td>503925002@qq.com</td>
+				<td>深圳市南山区科技园南区芒果网大厦702</td>
+				<td>五星级大酒店</td>
+			</tr>
+			<tr target="sid_user" rel="1" align="center">
+				<td>图图大酒店</td>
+				<td>涂斌</td>
+				<td>图图</td>
+				<td>13926570904</td>
+				<td>503925002@qq.com</td>
+				<td>深圳市南山区科技园南区芒果网大厦702</td>
+				<td>五星级大酒店</td>
+			</tr>
+			
+		</tbody>
+	</table>
+	<div class="panelBar">
+		<div class="pages">
+			<span>显示</span>
+			<select class="combox" name="numPerPage" onchange="navTabPageBreak({numPerPage:this.value})">
+				<option value="20">20</option>
+				<option value="50">50</option>
+				<option value="100">100</option>
+				<option value="200">200</option>
+			</select>
+			<span>条，共${totalCount}条</span>
+		</div>
+		
+		<div class="pagination" targetType="navTab" totalCount="200" numPerPage="20" pageNumShown="10" currentPage="1"></div>
+
+	</div>
+</div>

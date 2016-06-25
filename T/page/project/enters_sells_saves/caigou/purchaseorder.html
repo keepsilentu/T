@@ -1,0 +1,147 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="jquery.pagination.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$("#Pagination").pagination("15");
+});
+</script>
+
+<form id="pagerForm" method="post" action="purchaseorder.html">
+	<input type="hidden" name="status" value="${param.status}">
+	<input type="hidden" name="keywords" value="${param.keywords}" />
+	<input type="hidden" name="pageNum" value="1" />
+	<input type="hidden" name="numPerPage" value="${model.numPerPage}" />
+	<input type="hidden" name="orderField" value="${param.orderField}" />
+</form>
+
+
+<div class="pageHeader">
+	<form onsubmit="return navTabSearch(this);" action="purchaseorder.html" method="post">
+	<div class="searchBar">
+		<ul class="searchContent">
+		<li>
+				<label>供应商：</label>
+				<select class="combox" name="province" ref="w_combox_city" refUrl="demo/combox/city_{value}.html">
+		<option value="all">全部</option>
+		<option value="ydd">壹点点商业管理有限公司</option>
+		<option value="bj">阿里巴巴集团</option>
+		<option value="sh">腾讯计算机有限公司</option>
+	</select>
+	<li>
+	<label>采购人：</label>
+				<select class="combox" name="province" ref="w_combox_city" refUrl="demo/combox/city_{value}.html">
+		<option value="all">全部</option>
+		<option value="mht">马化腾</option>
+		<option value="bj">马云</option>
+		<option value="sh">李彦宏</option>
+	</select>
+	<li>
+	<label>审核状态：</label>
+				<select class="combox" name="province" ref="w_combox_city" refUrl="demo/combox/city_{value}.html">
+		<option value="all">全部</option>
+		<option value="mht">已审核</option>
+		<option value="bj">待审核</option>
+		<option value="sh">未提交审核</option>
+	</select>
+	<li>
+	<dd><div class="button"><div class="buttonContent"><button>查询</button></div></div></dd>
+		</ul>
+		
+		
+	</div>
+	</form>
+</div>
+<div class="pageContent">
+	<div class="panelBar">
+		<ul class="toolBar">
+			<li><a class="add" href="caigou/add.html" target="dialog" mask="true"><span>添加</span></a></li>
+			<li><a class="delete" href="demo/common/ajaxDone.html?uid={sid_user}" target="ajaxTodo" title="确定要删除吗?"><span>删除</span></a></li>
+			<li><a class="edit" href="editpage5.html?uid={sid_user}" target="dialog" mask="true"><span>修改</span></a></li>
+			<li><a class="add" href="lookpage5.html?uid={sid_user}" target="dialog" mask="true"><span>查看</span></a></li>
+			<li><a class="edit" href="editpage5.html?uid={sid_user}" target="dialog" mask="true"><span>提交审核</span></a></li>
+			
+			
+		</ul>
+	</div>
+	<table class="table" width="100%" layoutH="114">
+		<thead>
+			<tr align="center">
+				<th width="30">序号</th>
+				<th width="100">采购单号</th>
+				<th width="100">供应商</th>
+				<th width="50">联系人</th>
+				<th width="100">联系方式</th>
+				<th width="100">交货地址</th>
+				<th width="80">交货时间</th>
+				<th width="80">总价</th>
+				<th width="80">采购人</th>
+				<th width="80">操作人</th>
+				<th width="80">审核状态</th>
+<th width="80">操作</th>
+		</thead>
+		<tbody>
+			<tr target="sid_user" rel="1" align="center">
+				<td>1</td>
+				<td>1000111123456</td>
+				<td>深圳市壹点点商业管理有限公司</td>
+				<td>张三</td>
+				<td>13854547874</td>
+				<td>深圳市芒果网大厦</td>
+				<td>2016-02-17</td>
+				<td>1000.00</td>
+				<td>李斯</td>
+				<td>超级管理员</td>
+				<td>已审核</td>
+				<td><a class="delete" href="demo/common/ajaxDone.html?uid={sid_user}" target="ajaxTodo" title="确定要删除吗?"><span style="color: #0000FF;">删除</span></a>
+			<a class="edit" href="editpage5.html?uid={sid_user}" target="dialog" mask="true"><span style="color: #0000FF;">修改</span></a></td>
+			</tr>
+			<tr target="sid_user" rel="1" align="center">
+				<td>1</td>
+				<td>1000111123456</td>
+				<td>深圳市壹点点商业管理有限公司</td>
+				<td>张三</td>
+				<td>13854547874</td>
+				<td>深圳市芒果网大厦</td>
+				<td>2016-02-17</td>
+				<td>1000.00</td>
+				<td>李斯</td>
+				<td>超级管理员</td>
+				<td>已审核</td>
+				<td><a class="delete" href="demo/common/ajaxDone.html?uid={sid_user}" target="ajaxTodo" title="确定要删除吗?"><span style="color: #0000FF;">删除</span></a>
+			<a class="edit" href="editpage5.html?uid={sid_user}" target="dialog" mask="true"><span style="color: #0000FF;">修改</span></a></td>
+			</tr>
+			<tr target="sid_user" rel="1" align="center">
+				<td>1</td>
+				<td>1000111123456</td>
+				<td>深圳市壹点点商业管理有限公司</td>
+				<td>张三</td>
+				<td>13854547874</td>
+				<td>深圳市芒果网大厦</td>
+				<td>2016-02-17</td>
+				<td>1000.00</td>
+				<td>李斯</td>
+				<td>超级管理员</td>
+				<td>已审核</td>
+				<td><a class="delete" href="demo/common/ajaxDone.html?uid={sid_user}" target="ajaxTodo" title="确定要删除吗?"><span style="color: #0000FF;">删除</span></a>
+			<a class="edit" href="editpage5.html" target="dialog" mask="true"><span style="color: #0000FF;">修改</span></a></td>
+			</tr>
+			
+		</tbody>
+	</table>
+	<div class="panelBar">
+		<div class="pages">
+			<span>显示</span>
+			<select class="combox" name="numPerPage" onchange="navTabPageBreak({numPerPage:this.value})">
+				<option value="20">20</option>
+				<option value="50">50</option>
+				<option value="100">100</option>
+				<option value="200">200</option>
+			</select>
+			<span>条，共${totalCount}条</span>
+		</div>
+		
+		<div class="pagination" targetType="navTab" totalCount="200" numPerPage="20" pageNumShown="10" currentPage="1"></div>
+
+	</div>
+</div>

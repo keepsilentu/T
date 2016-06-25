@@ -1,0 +1,51 @@
+		<meta charset="UTF-8">
+		
+		<style type="text/css">
+			.diary-content{
+				margin: 20px;
+			}
+			.diary-content-main p{
+				color: white;
+				line-height: 40px;
+				margin-top: 60px;
+				width: 40%;
+			}
+			.word1,.word2{
+				font-size: 17px;
+			}
+			h1{
+				color: white;
+			}
+		</style>
+		
+		<div class="diary-content">
+			<div class="diary-content-title">
+				<h1>love is over</h1>
+			</div>
+			<div class="diary-content-main">
+			<p class="word1"></p>
+			<p class="word2"></p>
+			</div>
+		</div>
+		
+		<!--文字一句句出现js-->
+		<script>
+	jQuery(document).ready(function($){
+	    
+	    $(".word1").lbyl({
+	        content: "朦胧的月色正浓，星光与静夜默言无声，一个人的夜，一个人的惆怅心思。隐约着怎样面对一份不确定的爱感情的抉择，陷入爱里的不能自拔的人，没有了智商，低的可怜，痴痴的，一个人一旦遇上且喜欢的人，就会痴心，傻傻的，乱了方寸，无所适从，做什么都手足无措。爱上你，总是盼望你出现，一旦有你的身影，却又胆怯不敢打扰，所以越是想接近，却想逃离，越是想逃离，越想接近，转身背过脸去，却越清晰的看见，你的影子，从各个角度，从镜子反射过来你的身影，一个人活在一个人的影子里。如果，时间可以证明一切，是不是如我想象的你，是不是爱着我，给我勇气，告诉我，让我有信心不再闪躲，好敢于面对你，和你在一起，默默的相伴，默默的欢喜。红尘陌上，花开几许，你可以选择爱或不爱我，而我只能选择爱或更爱你！",
+	        
+	        speed: 100,
+	        type: 'show',
+	        finished: function(){ 
+	        	$('.word2').lbyl({
+	        		content:"生命的开始到结束就是一个由绽放到凋谢的花季，而心态却永如盛开摇曳的花朵般娇艳，只要心花不败，爱情的花自开，暗香飘来。一颗年轻的心是本色的心，不论成，不论败，顺境与逆境，晴朗时，碧心一片望朗月当空，淡雅观云水沸腾，有策马扬鞭的勇气，登高怀远的志向，阴霾时，请记得水穿会石开，避开那寒风，一物见佛，听水寂静，关云霁而忘我，前念后念，是否该随缘，爱抚被歧视的伤痛，温润浸透泪水的心灵。生命短短数十年，不论成败，百年后都成过眼烟云，让内心宽远，就不会坠入痛苦的深渊，在人生的任何阶段，如履平地，总会安然的度过。",
+	        		speed: 150,
+	        		type: 'fade',
+	        		fadeSpeed: 500
+	        	})
+	        } // Finished Callback
+	    });
+
+	});
+	</script>

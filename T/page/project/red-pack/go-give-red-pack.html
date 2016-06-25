@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+		<title>去发红包塞钱</title>
+		<script src="js/jquery1.8.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/nav.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/go-give-red-pack.css" />
+		
+	
+		
+		
+	</head>
+
+	<body>
+		<div class="wrapper">
+			
+			
+			<!--遮盖层-->
+			<div class="shade-div"></div>
+			<!--会员卡余额不足提示框-->
+			<div class="red-pack-dialog-mini" id="red-pack-dialog-mini-nomaney">
+				<span class="red-pack-dialog-mini-span1">会员卡余额不足，请先充值</span>
+				<span class="red-pack-dialog-mini-span2">确认</span>
+			</div>
+			
+			<!--未完善资料用户点击塞钱-->
+			<div class="red-pack-dialog-mini" id="red-pack-dialog-mini-nodata">
+				<span class="red-pack-dialog-mini-span1">请先完善资料，设置支付密码！</span>
+				<span class="red-pack-dialog-mini-span2">确认</span>
+			</div>
+			
+			<div class="gb-wrapper">
+				<!--支付遮盖层-->
+				<div class="shade_div shade_div_bg"></div>
+						<!-- 支付密码输入 -->
+	<div class="pay_password_div" style="display: none;">
+		<h3 class="pay_password_top">
+			<!--<em>x</em>-->
+			 请输入支付密码
+			 
+		</h3>
+		<div class="pay_password_bottom">
+			<!-- 交易类型与金额 -->
+			<p class="pay_type_number">
+				<!-- 类型 -->
+				<span class="pay_type">拼手气红包</span>
+				<!-- 金额 -->
+				<span class="pay_number">100.00</span>
+			</p>
+			<!-- 支付方式 -->
+			<div class="pay_type_class">
+				<!-- 支付方式选中框 -->
+				会员支付<span>(余额536.96元)</span>
+			</div>
+			<div class="pay_type_td">
+				<table>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+				</table>
+				<span id="successText"></span>
+				<input type="hidden" id="pay_type_input">
+			</div>
+		</div>
+	</div>
+	<!-- 模拟键盘 -->
+	<div class="simulate_key" style="display: none;">
+			<div class="simulate_key_toggle"></div>
+			<div class="simulate_key_number">
+				<table>
+					<tr>
+						<td>1</td>
+						<td>2</td>
+						<td>3</td>
+					</tr>
+					<tr>
+						<td>4</td>
+						<td>5</td>
+						<td>6</td>
+					</tr>
+					<tr>
+						<td>7</td>
+						<td>8</td>
+						<td>9</td>
+					</tr>
+					<tr>
+						<td class="simulate_key_clear"></td>
+						<td>0</td>
+						<td class="simulate_key_delete"></td>
+					</tr>
+				</table>
+			</div>
+				</div>
+				<span id="gp-nav-left">拼手气红包</span>
+				<span id="gp-nav-right">普通红包</span>
+				<!--拼手气红包-->
+				<div class="gp-div" id="gp-div-left">
+					<p style="border-bottom: 1px solid #CDCCCD;">总金额
+						<span>元</span>
+					<img src="img/01.png" width="20px"/>
+					<input type="number" placeholder="输入金额" />
+					
+					</p>
+					<p>红包个数
+						<span>个</span>
+					<input type="number" placeholder="输入个数" />
+					</p>
+				</div>
+				
+				<!--普通红包-->
+				<div class="gp-div" id="gp-div-right">
+					<p style="border-bottom: 1px solid #CDCCCD;">红包个数
+						<span>个</span>
+					<input type="number" placeholder="输入个数" />
+					
+					</p>
+					<p>单个金额
+						<span>个</span>
+					<input type="number" placeholder="输入金额" />
+					</p>
+				</div>
+				
+				<p id="gp-tips-1">每人仅领取一个，金额随机</p>
+				<div class="gp-div">
+					<p class="">留言：
+					<input type="text" maxlength="9" placeholder="恭喜发财，大吉大利！" />
+					</p>
+				</div>
+				<p id="gb-wrapper-p" class="VIP_card_bind_btn">塞 钱</p>
+				<div id="gp-tips">注：暂时仅支持会员余额发红包</div>
+			</div>
+		</div>
+		
+		
+	<script>
+		$(function(){
+			$(".simulate_key_number td").on({
+				"touchstart":function(){
+					// 如果密码已有六位，或点击的是删除按键，返回false，不执行;
+					if($("#pay_type_input").val().length>=6||$(this).hasClass("simulate_key_delete")) return false;
+					// 将此td添加一个背景;
+					$(this).css("background","#efefef")
+				},
+				"touchend":function(){
+					// 声明一个密码为一个变量;
+					var vals=$("#pay_type_input");
+
+					// 若点击的是删除键
+					if($(this).hasClass("simulate_key_delete")){
+					// 删除一个字符
+					$(".pay_password_bottom .error").removeClass("error");
+					$("#successText").html("");
+					vals.val(vals.val().substring(0,vals.val().length-1));
+					}else if($(this).hasClass("simulate_key_clear")){
+						$(".pay_type_td td").html("");
+						$("#pay_type_input").val("");
+						$(".pay_password_bottom .error").removeClass("error");
+					$("#successText").html("");
+					}else{
+						// 如果是其它按键
+						// 如果已有六位密码，返回false,不操作
+						if($("#pay_type_input").val().length>=6) return false;
+						// 清楚背景色
+						$(this).removeAttr("style");
+						// 将密码追加到密码框中
+						$("#pay_type_input").val($("#pay_type_input").val()+$(this).html());
+					}
+
+					//清空“密码框”
+					$(".pay_type_td td").html("");
+					$(".simulate_key_clear").click(function(){
+						$(".pay_type_td td").html("");
+						$("#pay_type_input").val("");
+					})
+					
+
+					// 将存放密码的隐藏文本框的值依次添加到“密码输入框”
+					var myArray=$("#pay_type_input").val().split("");
+					for(var i in myArray){
+							$(".pay_type_td td").eq(i).html("●");
+					}
+
+					// 此处做伪“回调”
+					if($("#pay_type_input").val().length==6){
+
+						// 初始默认密码为123465
+						if($("#pay_type_input").val()==123456){
+							$("#successText").html("密码正确");
+							// 伪跳转,正式上线请删除
+							// 伪跳转,正式上线请删除
+							// 伪跳转,正式上线请删除
+							window.location.href="go-give-red-pack-go.html"
+						}else{
+							$("#successText").html("请输入正确密码").addClass("error");
+							$(".pay_type_td").addClass("error");
+						}
+					}
+				}
+			})
+
+			// 点击密码输入的关闭，隐藏对应层；
+			$(".pay_password_top em").on("touchstart",function(){
+				$(".simulate_key").closest(".simulate_key").animate({
+					"bottom":"-100%"
+				},300,function(){
+					$(".simulate_key").hide();
+				});
+				$(".shade_div_bg,.pay_password_div").fadeOut(300)
+			})
+
+ 			// 点击确定，清空已输入的密码，并显示对应层
+			$(".VIP_card_bind_btn").on("touchstart",function(){
+				$(".pay_type_td td").html("");
+				$("#pay_type_input").val("");
+				$(".simulate_key").closest(".simulate_key").show().animate({
+					"bottom":"0"
+				},300);
+				$(".shade_div_bg,.pay_password_div").fadeIn(300);
+				// 获取订单相关信息
+				var htmls=$(".tab_list .on").find("p").html();
+				var bgImg=$(".tab_list .on").css("background-image");
+				var moneyNum=$(".commodity_type_money").html();
+				$(".pay_password_div").find(".pay_number").html(moneyNum);
+				$(".pay_password_div").find(".pay_type_class").html(htmls).css("background-image",bgImg);
+			})
+
+			//模拟键盘收起事件
+			$(".simulate_key_toggle").on({
+				"touchend":function(){
+					$(this).closest(".simulate_key").animate({
+						"bottom":"-100%"
+					},300,function(){
+						$(".simulate_key").hide();
+					});
+					$(".shade_div_bg,.pay_password_div").fadeOut(300);
+
+				}
+			})
+			// 会员支付时弹出提示
+			$(".selected_commodity_patter_type_vip").on("touchstart",function(){
+				$(".shade_div_bg,.shade_div_main").fadeIn();
+					$(".wrap_footer").css("zIndex",0)
+			})
+
+			$(".dispatching_style_reset").on("touchstart",function(){
+				$(".selected_commodity_patter_type li:first").addClass("on").siblings().removeClass("on");
+				$(".wrap_footer").css("zIndex",100)
+				$(".shade_div_bg,.shade_div_main").fadeOut()
+			})
+		})
+	</script>
+		
+		
+	</body>
+
+</html>

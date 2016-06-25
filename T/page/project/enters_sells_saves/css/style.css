@@ -1,0 +1,54 @@
+/*商品属性下拉框*/
+.select1 {  margin-top: 10px;}
+
+/*商品属性leble*/
+.sptypelable{width: 70px;  margin-top: 10px;}
+
+
+
+	#thisBefore li{float:left;margin:0 10px 5px 0;}
+	#thisBefore{padding:0;margin:0;overflow:hidden;}
+	#thisBefore:after{content:"";clear:both;}
+
+	.SPE_value{padding:3px 5px;margin:3px 5px 3px 0px;background:#ccc; float: left; }
+	.SPE_value i{font-style: normal;padding:5px;cursor:pointer;color:#EFEFEF;}
+	.SPE_value i:hover{color:#941424;text-decoration:underline;}
+	em,i{font-style:normal;}
+	.reset_val{cursor:pointer;}
+	.SPE_value input[type="checkbox"] {
+		vertical-align: middle;
+	}
+	
+	
+.addListName{
+	display: inline-block; overflow: hidden;
+	width: 5rem;
+}
+
+/*规格的属性*/
+#addTable1{margin-left: 128px; margin-top: 10px; width: 430px;
+	
+}
+.clear{
+	clear:both
+}
+/*规格的属性*/
+.SPE_div{margin-left: 128px
+; margin-top: 10px; width: 430px;
+	
+}
+.SPE_div input[type="checkbox"] {
+	display: none;
+}
+
+.delete_select{
+	cursor: pointer;
+	
+}
+
+/*商品属性*/
+#ProductType{
+	margin-top: 100px;
+	background-color: #0099FF;
+}
+

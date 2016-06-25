@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		
+		<title>冰世</title>
+		<link href="css/login.css" rel="stylesheet" type="text/css" />
+		<script language="JavaScript" src="js/jquery1.8.js"></script>
+		<script src="js/cloud.js" type="text/javascript"></script>
+        <script src="js/login.js" type="text/javascript" charset="utf-8"></script>
+		<script language="javascript">
+			$(function() {
+				$('.loginbox').css({
+					'position': 'absolute',
+					'left': ($(window).width() - 692) / 2
+				});
+				$(window).resize(function() {
+					$('.loginbox').css({
+						'position': 'absolute',
+						'left': ($(window).width() - 692) / 2
+					});
+				})
+			});
+		</script>
+
+	</head>
+
+	<body style="background-color:#1c77ac; <!--background-image:url(images/light.png);--> background-repeat:no-repeat; background-position:center top; overflow:hidden;">
+
+		<div id="mainBody">
+			<div id="cloud1" class="cloud"></div>
+			<div id="cloud2" class="cloud"></div>
+		</div>
+
+		<div class="logintop">
+			<span>欢迎光临</span>
+			<ul>
+				<li><a href="#">一点点云平台</a></li>
+				<li><a href="#">帮助</a></li>
+				<li><a href="#">关于</a></li>
+			</ul>
+		</div>
+
+<form method="post" name="loginAction" id="loginAction" action="request">
+		<div class="loginbody">
+
+			<!--<span class="systemlogo">-->
+				<span style="width: 100%; text-align: center; font-size: 36px; height: 71px;line-height: 71px; margin-top: 75px; color: white;">Silent的个人网站</span>
+			<!--</span>-->
+            
+			<div class="loginbox">
+
+				<ul>
+					<li>
+						<input name="" type="text" class="loginuser" value="账号" onclick="JavaScript:this.value=''" />
+					</li>
+					<li>
+						<input name="" type="text" class="loginpwd" value="密码" onclick="JavaScript:this.value=''" />
+					</li>
+					<li>
+						<input name="" type="button" class="loginbtn" value="登录"  />
+						<!--onclick="javascript:window.location='index.html'"-->
+						<label>
+							<input name="" type="checkbox" value="" checked="checked" />记住密码</label>
+						<label><a href="#">忘记密码？</a></label>
+					</li>
+				</ul>
+
+			</div>
+
+		</div>
+		</form>
+
+		<div class="loginbm">版权所有 2016 <a href="http://www.yiql.net">一点点</a> 胸怀大志 从一点点做起</div>
+
+	</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+		<title>拆红包</title>
+		<script src="js/jquery1.8.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/link.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	</head>
+	<body>
+		<div class="wrapper">
+			<!--红包已过期弹窗-->
+			<!--遮盖层-->
+			<div class="shade-div"></div>
+			<!--红包弹窗-->
+			<div class="red-pack--dialog">
+				<span class="red-pack-dialog-title">凯门的红包</span>
+				<span class="red-pack-dialog-main">超过2小时未领取，红包已失效。</span>
+				<img class="red-pack-dialog-img" src="img/10.png" width="35%" height="40%">
+				<span id="red-pack-overdue-look" class="red-pack-dialog-foot">去看看大家的手气&gt;</span>
+			</div>
+			
+			<!--发红包的人看到已过期弹窗-->
+			<!--遮盖层-->
+			<div class="shade-div"></div>
+			<!--红包弹窗-->
+			<div class="red-pack--dialog">
+				<span class="red-pack-dialog-title">凯门的红包</span>
+				<span class="red-pack-dialog-main">超过24小时未领取，红包已退回你的会员余额。</span>
+				<img class="red-pack-dialog-img" src="img/10.png" width="35%" height="40%" style="top: 90px;">
+				<span id="my-red-pack-overdue-look" class="red-pack-dialog-foot" style="top: 29%;">去发红包&gt;</span>
+			</div>
+			
+			
+		  <div class="top">
+		  	<span class="my-red-pack">拆开凯特的红包</span>	
+		  	<span class="open-red-pack-span1">给你发了一个大红包!</span>
+		    <span class="open-red-pack-span2">新年快乐，大吉大利!</span>
+		  </div>
+		  <div class="main" style="background-color: #AD2D27;">
+		  	<div style="text-align: center;">
+				
+		  		<img id="red-pack-share-send-chai" src="img/chai.png" alt="拆红包" width="150px"/>
+		  	</div>
+		  </div>
+		</div>
+	</body>
+</html>

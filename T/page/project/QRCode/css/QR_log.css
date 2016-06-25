@@ -1,0 +1,98 @@
+
+/*搜索框*/
+.Search{
+	background: white;
+	width: 100%;
+	height: 50px;
+}
+
+#waitimg{
+	font-size: 16px;
+	color: #116cf8;
+	text-align: center;
+	display: none;
+	width: 254px;
+	height: 152px;
+	position: absolute;
+	top: 38%;
+	left: 42%;
+	
+}
+#waitimg img{	
+	width: 36px;
+	height: 36px;
+	display: block;
+	margin: auto;
+	margin-top: 32px;
+}
+#waitimg span{
+	display: block;
+	margin-top: 20px;
+}
+
+
+.Search option{
+	height: 33px;
+}
+
+.QR_log_main{
+	height: 520px;
+	background: #fafafa;
+}
+
+/*分页*/
+.paging{
+	color: gray;
+	width: 850px;
+	margin: auto;
+}
+
+.pageList a:focus{
+	color: white;
+	background-color: red;	
+}
+
+.pageUp,.pageDown,.pageOk{
+	background-image: url(../img/pageUp.png);
+	width: 50px;
+}
+
+.pageUp,.pageList a,.pageDown,.pages,.pageOk,.pageList{
+	border: 1px solid gainsboro;
+	border-radius: 2px;
+	float: left;
+	margin-left: 5px;
+	margin-right: 5px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 14px;
+	font-family: "微软雅黑";
+}
+
+.pageList a,.pages input{
+	color: black;
+	width: 30px;
+	height: 30px;
+	border-radius: 2px;
+	
+}
+
+
+
+.pageList a:hover{
+	border-radius: 3px;
+	color: white;
+	background: red;
+}
+
+.pageList{
+	width: 470px;
+	border: 0px;
+}
+
+/*共多少页*/
+.pages{
+	border: 0px;
+}

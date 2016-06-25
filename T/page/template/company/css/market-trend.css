@@ -1,0 +1,51 @@
+.market-trend{
+	width: 840px;
+	height: 100%;
+	margin: auto;
+	/*border: 1px solid orange;*/
+	background-color: white;
+	/*background-image: ;*/
+}
+
+.market-trend-main{
+	border-bottom: 1px solid #f0f0f0;
+	height: 180px;
+}
+.market-trend-main-left-img{
+	clear: both;
+	width: 200px;
+	height: 125;
+	margin-top: 30px;
+	margin-left: 30px;
+	float: left;
+}
+.market-trend-main-right-main{
+	float: left;
+	margin-left: 30px;
+	margin-top: 30px;
+	height: 120px;
+	width: 550px;
+}
+
+.market-trend-main-right-main a{
+	color: #212121;
+	/*font-weight: bold;*/
+	font-size: 18px;
+}
+.market-trend-main-right-main a:hover{
+	color: #44cef6;
+	text-decoration: none;
+}
+/*日期*/
+.market-trend-main-date{
+	margin: 15px 0;
+	color: #BBB5B5;
+}
+.market-trend-main-content{
+	height: 42px;
+	/*color: #C9C9C9;*/
+	color: #737373;
+	overflow: hidden;
+	font-size: 15px;
+	text-overflow: ellipsis;
+}

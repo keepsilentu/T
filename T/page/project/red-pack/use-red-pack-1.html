@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+		<title>未关注用户点击花红包</title>
+		<script src="js/jquery1.8.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>		
+	</head>
+	<body>
+		<div class="wrapper" style="background-image: url(img/index.png); background-size: 100% 100%;">
+		  
+		  
+		  <!--未关注用户点击花红包首页提示关注公众号框-->
+		  <div class="urp-focus">
+		  	<img src="img/05-01.png" style="position:absolute; top: 30%;left: 50%; margin-left: -55px;"/>
+		  	<img id="urp-x" src="img/x.png" style="position: absolute;top: 17%; left: 82%;"/>
+		  </div>
+		</div>
+		
+		<script type="text/javascript">
+//		关闭XX
+			$(function(){
+				$("#urp-x").on("click",function(){
+					$(".urp-focus").css("display","none");
+				})
+			})
+		</script>
+	</body>
+</html>
